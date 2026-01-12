@@ -1,0 +1,68 @@
+/* General Layout */
+body {
+  background-color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Customization */
+.navbar {
+  background-color: #000000 !important;
+  padding: 15px 0;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-family: 'Brush Script MT', cursive; /* Trying to match logo font */
+  font-size: 1.8rem;
+}
+
+.nav-link {
+  color: #aaaaaa !important;
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #ffffff !important;
+}
+
+/* Icons for Veg/Non-Veg */
+.veg-icon {
+  width: 15px;
+  height: 15px;
+  background-color: green;
+  border: 1px solid #ccc;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.nonveg-icon {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border: 1px solid #ccc;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  color: orange;
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
+}
+
+/* Buttons */
+.btn-warning {
+  background-color: #ffc107;
+  color: white;
+  font-weight: bold;
+}
+.btn-warning:hover {
+  background-color: #e0a800;
+  color: white;
+}
