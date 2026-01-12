@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { API_ENDPOINTS } from '../config/api';
 
-// Create axios instance with default config
 const apiClient = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:4000',
   headers: {
@@ -10,10 +9,8 @@ const apiClient = axios.create({
   timeout: 10000,
 });
 
-// Request interceptor
 apiClient.interceptors.request.use(
   (config) => {
-    // Add auth token or other headers here if needed
     return config;
   },
   (error) => {
@@ -21,26 +18,20 @@ apiClient.interceptors.request.use(
   }
 );
 
-// Response interceptor
 apiClient.interceptors.response.use(
   (response) => response,
   (error) => {
-    // Handle common errors
     if (error.response) {
-      // Server responded with error status
       console.error('API Error:', error.response.data);
     } else if (error.request) {
-      // Request made but no response received
       console.error('Network Error:', error.request);
     } else {
-      // Something else happened
       console.error('Error:', error.message);
     }
     return Promise.reject(error);
   }
 );
 
-// Pizza API
 export const pizzaAPI = {
   getAll: async () => {
     const response = await apiClient.get(API_ENDPOINTS.PIZZAS);
@@ -52,7 +43,6 @@ export const pizzaAPI = {
   },
 };
 
-// Ingredient API
 export const ingredientAPI = {
   getAll: async () => {
     const response = await apiClient.get(API_ENDPOINTS.INGREDIENTS);
@@ -64,7 +54,6 @@ export const ingredientAPI = {
   },
 };
 
-// Cart API
 export const cartAPI = {
   getAll: async () => {
     const response = await apiClient.get(API_ENDPOINTS.CART);

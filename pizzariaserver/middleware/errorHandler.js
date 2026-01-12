@@ -1,7 +1,6 @@
 const errorHandler = (err, req, res, next) => {
   console.error('Error:', err);
 
-  // Mongoose validation error
   if (err.name === 'ValidationError') {
     return res.status(400).json({
       error: 'Validation Error',
@@ -9,12 +8,10 @@ const errorHandler = (err, req, res, next) => {
     });
   }
 
-  // Mongoose cast error (invalid ID)
   if (err.name === 'CastError') {
     return res.status(400).json({ error: 'Invalid ID format' });
   }
 
-  // Default error
   const statusCode = err.statusCode || 500;
   const message = err.message || 'Internal Server Error';
 
