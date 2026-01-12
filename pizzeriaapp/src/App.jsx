@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <div style={{minHeight: '80vh', flex: 1}}>
+      <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/order" element={<OrderPizza />} />
@@ -19,7 +19,7 @@ function App() {
         </Routes>
       </div>
       <footer className="footer">
-          Copyrights @ 2026 Pizzeria. All rights reserved.
+        Copyrights @ 2026 Pizzeria. All rights reserved.
       </footer>
     </Router>
   );

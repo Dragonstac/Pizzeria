@@ -1,10 +1,13 @@
-/* General Layout */
 body {
   background-color: #ffffff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Navbar Customization */
+.main-content {
+  min-height: 80vh;
+  flex: 1;
+}
+
 .navbar {
   background-color: #000000 !important;
   padding: 15px 0;
@@ -13,7 +16,7 @@ body {
 .navbar-brand {
   display: flex;
   align-items: center;
-  font-family: 'Brush Script MT', cursive; /* Trying to match logo font */
+  font-family: 'Brush Script MT', cursive;
   font-size: 1.8rem;
 }
 
@@ -23,11 +26,11 @@ body {
   margin-left: 15px;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
   color: #ffffff !important;
 }
 
-/* Icons for Veg/Non-Veg */
 .veg-icon {
   width: 15px;
   height: 15px;
@@ -46,7 +49,6 @@ body {
   margin-right: 8px;
 }
 
-/* Footer */
 .footer {
   text-align: center;
   padding: 20px;
@@ -56,13 +58,82 @@ body {
   border-top: 1px solid #eee;
 }
 
-/* Buttons */
 .btn-warning {
   background-color: #ffc107;
   color: white;
   font-weight: bold;
 }
+
 .btn-warning:hover {
   background-color: #e0a800;
   color: white;
+}
+
+.navbar-logo {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.error-message {
+  color: #dc3545;
+  padding: 15px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.pizza-type {
+  font-size: 0.8rem;
+}
+
+.pizza-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.cart-item-image {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+}
+
+.quantity-control {
+  width: 100px;
+}
+
+.selected-pizza-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+.ingredient-image-cell {
+  width: 100px;
+}
+
+.ingredient-image {
+  object-fit: contain;
+}
+
+.checkbox-cell {
+  width: 100px;
+}
+
+.total-cost {
+  max-width: 300px;
 }
